@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89E5FA11287A28F90051BF12 /* UnsplashPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5FA10287A28F90051BF12 /* UnsplashPhotoModel.swift */; };
+		89E5FA13287A29E80051BF12 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5FA12287A29E80051BF12 /* NetworkService.swift */; };
 		F56FE0ED286258420039EF96 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56FE0EC286258420039EF96 /* TabBarController.swift */; };
 		F56FE0EF286258E50039EF96 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56FE0EE286258E50039EF96 /* GalleryViewController.swift */; };
 		F56FE0F1286259080039EF96 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56FE0F0286259080039EF96 /* FavoriteViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89E5FA10287A28F90051BF12 /* UnsplashPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoModel.swift; sourceTree = "<group>"; };
+		89E5FA12287A29E80051BF12 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F56FE0EC286258420039EF96 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F56FE0EE286258E50039EF96 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		F56FE0F0286259080039EF96 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
@@ -39,18 +43,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F56FE0E8286255CB0039EF96 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		F56FE0E9286255D50039EF96 /* Views */ = {
+		89E5FA0E287A28660051BF12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		89E5FA0F287A286F0051BF12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				89E5FA10287A28F90051BF12 /* UnsplashPhotoModel.swift */,
+				89E5FA12287A29E80051BF12 /* NetworkService.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F56FE0EA286255DA0039EF96 /* Controllers */ = {
@@ -94,10 +100,10 @@
 		F591B48128624D25000E9510 /* Unsplash */ = {
 			isa = PBXGroup;
 			children = (
+				89E5FA0F287A286F0051BF12 /* Models */,
+				89E5FA0E287A28660051BF12 /* Views */,
 				F56FE0EA286255DA0039EF96 /* Controllers */,
-				F56FE0E8286255CB0039EF96 /* Models */,
 				F56FE0EB286256290039EF96 /* Service */,
-				F56FE0E9286255D50039EF96 /* Views */,
 			);
 			path = Unsplash;
 			sourceTree = "<group>";
@@ -172,11 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E5FA11287A28F90051BF12 /* UnsplashPhotoModel.swift in Sources */,
 				F56FE0ED286258420039EF96 /* TabBarController.swift in Sources */,
 				F56FE0EF286258E50039EF96 /* GalleryViewController.swift in Sources */,
 				F591B48328624D25000E9510 /* AppDelegate.swift in Sources */,
 				F591B48528624D25000E9510 /* SceneDelegate.swift in Sources */,
 				F56FE0F1286259080039EF96 /* FavoriteViewController.swift in Sources */,
+				89E5FA13287A29E80051BF12 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

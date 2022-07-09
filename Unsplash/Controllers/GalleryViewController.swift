@@ -12,7 +12,9 @@ class GalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-
+        NetworkService.getRandomPhotos { photos in
+            print(photos.count)
+        }
     }
 
     private func setupNavigationBar() {
