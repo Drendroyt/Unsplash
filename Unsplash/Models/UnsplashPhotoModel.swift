@@ -25,3 +25,5 @@ struct UnsplashPhotoModel: Decodable {
     }
 
 }
+
+var photosContent: [UnsplashPhotoModel] = []

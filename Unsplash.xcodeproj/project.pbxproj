@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89AB4649287B4A44008FD2F4 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB4648287B4A44008FD2F4 /* PhotosViewController.swift */; };
+		89AB464B287B4CEA008FD2F4 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB464A287B4CEA008FD2F4 /* PhotoCollectionViewCell.swift */; };
+		89AB464E287B519D008FD2F4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB464D287B519D008FD2F4 /* UIViewExtension.swift */; };
 		89E5FA11287A28F90051BF12 /* UnsplashPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5FA10287A28F90051BF12 /* UnsplashPhotoModel.swift */; };
 		89E5FA13287A29E80051BF12 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5FA12287A29E80051BF12 /* NetworkService.swift */; };
 		F56FE0ED286258420039EF96 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56FE0EC286258420039EF96 /* TabBarController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89AB4648287B4A44008FD2F4 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		89AB464A287B4CEA008FD2F4 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		89AB464D287B519D008FD2F4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		89E5FA10287A28F90051BF12 /* UnsplashPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoModel.swift; sourceTree = "<group>"; };
 		89E5FA12287A29E80051BF12 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F56FE0EC286258420039EF96 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -43,9 +49,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89AB464C287B5163008FD2F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				89AB464D287B519D008FD2F4 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		89E5FA0E287A28660051BF12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				89AB464A287B4CEA008FD2F4 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -65,6 +80,7 @@
 				F56FE0EC286258420039EF96 /* TabBarController.swift */,
 				F56FE0EE286258E50039EF96 /* GalleryViewController.swift */,
 				F56FE0F0286259080039EF96 /* FavoriteViewController.swift */,
+				89AB4648287B4A44008FD2F4 /* PhotosViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +116,7 @@
 		F591B48128624D25000E9510 /* Unsplash */ = {
 			isa = PBXGroup;
 			children = (
+				89AB464C287B5163008FD2F4 /* Extensions */,
 				89E5FA0F287A286F0051BF12 /* Models */,
 				89E5FA0E287A28660051BF12 /* Views */,
 				F56FE0EA286255DA0039EF96 /* Controllers */,
@@ -178,10 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89AB464E287B519D008FD2F4 /* UIViewExtension.swift in Sources */,
 				89E5FA11287A28F90051BF12 /* UnsplashPhotoModel.swift in Sources */,
+				89AB4649287B4A44008FD2F4 /* PhotosViewController.swift in Sources */,
 				F56FE0ED286258420039EF96 /* TabBarController.swift in Sources */,
 				F56FE0EF286258E50039EF96 /* GalleryViewController.swift in Sources */,
 				F591B48328624D25000E9510 /* AppDelegate.swift in Sources */,
+				89AB464B287B4CEA008FD2F4 /* PhotoCollectionViewCell.swift in Sources */,
 				F591B48528624D25000E9510 /* SceneDelegate.swift in Sources */,
 				F56FE0F1286259080039EF96 /* FavoriteViewController.swift in Sources */,
 				89E5FA13287A29E80051BF12 /* NetworkService.swift in Sources */,
