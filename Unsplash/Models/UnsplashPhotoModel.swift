@@ -18,12 +18,17 @@ struct UnsplashPhotoModel: Decodable {
 
     struct UserInfo: Decodable {
         let name: String
+        let location: String?
+        let profile_image: ImageURL
     }
 
     struct PhotoURL: Decodable {
         let thumb: String
+        let regular: String
+    }
+
+    struct ImageURL: Decodable {
+        let large: String
     }
 
 }
-
-var photosContent: [UnsplashPhotoModel] = []

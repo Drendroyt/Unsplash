@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		895876322882F40A007048AA /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895876312882F40A007048AA /* PhotoDetailViewController.swift */; };
 		89AB4649287B4A44008FD2F4 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB4648287B4A44008FD2F4 /* PhotosViewController.swift */; };
 		89AB464B287B4CEA008FD2F4 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB464A287B4CEA008FD2F4 /* PhotoCollectionViewCell.swift */; };
 		89AB464E287B519D008FD2F4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB464D287B519D008FD2F4 /* UIViewExtension.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		895876312882F40A007048AA /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		89AB4648287B4A44008FD2F4 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		89AB464A287B4CEA008FD2F4 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		89AB464D287B519D008FD2F4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				F56FE0EE286258E50039EF96 /* GalleryViewController.swift */,
 				F56FE0F0286259080039EF96 /* FavoriteViewController.swift */,
 				89AB4648287B4A44008FD2F4 /* PhotosViewController.swift */,
+				895876312882F40A007048AA /* PhotoDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				89AB4649287B4A44008FD2F4 /* PhotosViewController.swift in Sources */,
 				F56FE0ED286258420039EF96 /* TabBarController.swift in Sources */,
 				F56FE0EF286258E50039EF96 /* GalleryViewController.swift in Sources */,
+				895876322882F40A007048AA /* PhotoDetailViewController.swift in Sources */,
 				F591B48328624D25000E9510 /* AppDelegate.swift in Sources */,
 				89AB464B287B4CEA008FD2F4 /* PhotoCollectionViewCell.swift in Sources */,
 				F591B48528624D25000E9510 /* SceneDelegate.swift in Sources */,

@@ -11,6 +11,15 @@ class PhotosViewController: UIViewController {
 
     private var array: [UnsplashPhotoModel] = []
 
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView()
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        spinner.hidesWhenStopped = true
+        spinner.style = .large
+        spinner.startAnimating()
+        return spinner
+    }()
+
     private lazy var photosCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -18,18 +27,16 @@ class PhotosViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
-        collectionView.backgroundColor = .blue
         return collectionView
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-
         NetworkService.getRandomPhotos { photos in
             DispatchQueue.main.async {
                 self.array = photos
                 self.photosCollectionView.reloadData()
+                self.activityIndicator.stopAnimating()
             }
         }
         layout()
@@ -38,8 +45,11 @@ class PhotosViewController: UIViewController {
 
     private func layout() {
         view.addSubview(photosCollectionView)
+        view.addSubview(activityIndicator)
 
         NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             photosCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
             photosCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             photosCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -68,12 +78,17 @@ extension PhotosViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         sideInset
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = PhotoDetailViewController()
+        detailVC.photoModel = array[indexPath.item]
+        navigationController?.pushViewController(detailVC, animated: false)
+    }
 }
 
 extension PhotosViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(array.count)
         return array.count
     }
 
